@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { HangingSpider } from './art';
+import { SpiderEmblem } from './art';
 
 export default function ScrollStrand() {
   const lineRef = useRef<HTMLSpanElement>(null);
@@ -40,7 +40,7 @@ export default function ScrollStrand() {
         <span className="strand__fill" ref={lineRef} />
       </span>
       <span className="strand__spider" ref={spiderRef}>
-        <HangingSpider />
+        <SpiderEmblem />
       </span>
       <span className="strand__pct" ref={pctRef}>00</span>
     </div>
