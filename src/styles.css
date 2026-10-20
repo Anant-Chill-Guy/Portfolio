@@ -7115,3 +7115,30 @@ html.motion .reveal.is-in {
   margin-left: 0;
   transform: translate(-50%, -50%);
 }
+
+/* Keep the strand and spider fully inside the viewport. */
+.strand {
+  right: 46px;
+}
+.strand__spider {
+  width: 68px;
+  height: 68px;
+  margin-left: 0;
+  transform: translate(-50%, 0);
+}
+.strand__spider svg {
+  width: 68px;
+  height: 68px;
+}
+
+.strand__track {
+  left: calc(50% - 0.5px);
+}
+.strand__spider {
+  width: 70px;
+  height: 70px;
+}
+.strand__spider svg {
+  width: 70px;
+  height: 70px;
+}

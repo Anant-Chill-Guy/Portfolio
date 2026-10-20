@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { SpiderEmblem } from './art';
+import { StrandSpider } from './art';
 
 export default function ScrollStrand() {
   const lineRef = useRef<HTMLSpanElement>(null);
@@ -12,12 +12,12 @@ export default function ScrollStrand() {
       frame = 0;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
-      const travel = window.innerHeight - 140;
+      const travel = window.innerHeight - 220;
       const top = 70 + progress * travel;
       if (lineRef.current) lineRef.current.style.height = `${progress * travel}px`;
       if (spiderRef.current) {
         spiderRef.current.style.top = `${top}px`;
-        spiderRef.current.style.transform = 'translate(-50%, -50%)';
+        spiderRef.current.style.transform = 'translate(-50%, 0)';
       }
       if (pctRef.current) pctRef.current.textContent = String(Math.round(progress * 100)).padStart(2, '0');
     };
@@ -40,7 +40,7 @@ export default function ScrollStrand() {
         <span className="strand__fill" ref={lineRef} />
       </span>
       <span className="strand__spider" ref={spiderRef}>
-        <SpiderEmblem />
+        <StrandSpider />
       </span>
       <span className="strand__pct" ref={pctRef}>00</span>
     </div>

@@ -78,3 +78,24 @@ export function WebPattern({ className, rings = 6 }: ArtProps & { rings?: number
     </svg>
   );
 }
+
+export function StrandSpider({ className }: ArtProps) {
+  return (
+    <svg className={className} viewBox="0 0 100 100" fill="none" aria-hidden="true">
+      <path d="M50 0v27" stroke="currentColor" strokeWidth="1.2" opacity="0.65" />
+      <g stroke="currentColor" strokeWidth="4.2" strokeLinecap="round">
+        <path d="M42 42C32 36 26 24 14 18" />
+        <path d="M41 50C28 48 20 36 8 32" />
+        <path d="M41 58C28 60 20 72 8 76" />
+        <path d="M43 66C34 74 30 86 18 92" />
+        <path d="M58 42C68 36 74 24 86 18" />
+        <path d="M59 50C72 48 80 36 92 32" />
+        <path d="M59 58C72 60 80 72 92 76" />
+        <path d="M57 66C66 74 70 86 82 92" />
+      </g>
+      <ellipse cx="50" cy="62" rx="11" ry="17" fill="currentColor" />
+      <circle cx="50" cy="38" r="8.5" fill="currentColor" />
+      <path d="M50 47v28" stroke="#0a0810" strokeWidth="0.9" opacity="0.3" />
+    </svg>
+  );
+}
