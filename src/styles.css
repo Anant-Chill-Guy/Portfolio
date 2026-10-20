@@ -7109,3 +7109,9 @@ html.motion .reveal.is-in {
   height: 74px;
   filter: none;
 }
+
+/* Centre the spider exactly on the strand and keep it upright. */
+.strand__spider {
+  margin-left: 0;
+  transform: translate(-50%, -50%);
+}

@@ -17,7 +17,7 @@ export default function ScrollStrand() {
       if (lineRef.current) lineRef.current.style.height = `${progress * travel}px`;
       if (spiderRef.current) {
         spiderRef.current.style.top = `${top}px`;
-        spiderRef.current.style.transform = `translate(-50%, -50%) rotate(${(progress * 22 - 11).toFixed(1)}deg)`;
+        spiderRef.current.style.transform = 'translate(-50%, -50%)';
       }
       if (pctRef.current) pctRef.current.textContent = String(Math.round(progress * 100)).padStart(2, '0');
     };
