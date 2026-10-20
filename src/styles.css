@@ -7142,3 +7142,54 @@ html.motion .reveal.is-in {
   width: 70px;
   height: 70px;
 }
+
+/* White web hanging from the top of the viewport, not a full grey rail. */
+.strand__track {
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  background: transparent;
+}
+.strand__fill {
+  top: 0;
+  width: 2px;
+  margin-left: -0.5px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 253, 247, 0.95),
+    rgba(243, 237, 218, 0.72) 70%,
+    rgba(243, 237, 218, 0.5)
+  );
+  box-shadow: 0 0 6px rgba(243, 237, 218, 0.35);
+  will-change: height;
+}
+.strand::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 4px;
+  width: 5px;
+  height: 5px;
+  margin-left: -2.5px;
+  border-radius: 50%;
+  background: var(--paper);
+  box-shadow: 0 0 8px rgba(243, 237, 218, 0.5);
+}
+.strand__spider svg {
+  transform-origin: 50% 0;
+  animation: strandSway 5.5s ease-in-out infinite;
+}
+@keyframes strandSway {
+  0%,
+  100% {
+    transform: rotate(-1.8deg);
+  }
+  50% {
+    transform: rotate(1.8deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .strand__spider svg {
+    animation: none;
+  }
+}

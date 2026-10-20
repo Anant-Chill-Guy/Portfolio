@@ -14,7 +14,7 @@ export default function ScrollStrand() {
       const progress = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
       const travel = window.innerHeight - 220;
       const top = 70 + progress * travel;
-      if (lineRef.current) lineRef.current.style.height = `${progress * travel}px`;
+      if (lineRef.current) lineRef.current.style.height = `${top}px`;
       if (spiderRef.current) {
         spiderRef.current.style.top = `${top}px`;
         spiderRef.current.style.transform = 'translate(-50%, 0)';
